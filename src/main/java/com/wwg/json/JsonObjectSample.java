@@ -1,5 +1,6 @@
 package com.wwg.json;
 
+import com.wwg.bean.Diaosi;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -13,8 +14,9 @@ import java.util.Map;
 public class JsonObjectSample {
 
     public static void main(String[] args) {
-        jSONObjectSample();
-        createJsonByMap();
+        //jSONObjectSample();
+        //createJsonByMap();
+        createJsonByBean();
     }
 
     /**
@@ -57,6 +59,23 @@ public class JsonObjectSample {
         wangxiaoer.put("comment", "这是一个注释");
 
         System.out.println(new JSONObject(wangxiaoer).toString());
+    }
+
+    /**
+     * 通过bean构建JSON对象
+     */
+    private static void createJsonByBean(){
+        Diaosi wangxiaoer = new Diaosi();
+        wangxiaoer.setName("王小二");
+        wangxiaoer.setAge(25.2);
+        wangxiaoer.setBirthday("1995-02-01");
+        wangxiaoer.setSchool("蓝翔");
+        wangxiaoer.setMajor(new String[] {"理发", "挖掘机"});
+        wangxiaoer.setHas_girlfriend(false);
+        wangxiaoer.setCar(null);
+        wangxiaoer.setHouse(null);
+        wangxiaoer.setComment("这是一个注释");
+        System.out.println(new JSONObject(wangxiaoer));
     }
 
 }
