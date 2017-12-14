@@ -25,8 +25,11 @@ public class GsonCreateSample {
         wangxiaoer.setHouse(null);
         wangxiaoer.setComment("这是一个注释");
 
+        wangxiaoer.setIgnore("看不见我看不见我");
+
         //使用GsonBuilder可以更加灵活构建gson对象，可以在生成JSON对象的过程中做一些想要的修改
         GsonBuilder gsonBuilder = new GsonBuilder();
+        //将原本一行的结果打出多行的JSON格式，方便阅读
         gsonBuilder.setPrettyPrinting();
         gsonBuilder.setFieldNamingStrategy(new FieldNamingStrategy() {
 

@@ -1,5 +1,7 @@
 package com.wwg.bean;
 
+import java.util.Arrays;
+
 /**
  * Created by wwg on 2017/12/14.
  * @author wwg
@@ -17,6 +19,17 @@ public class Diaosi {
     private String[] major;
     private String comment;
     private String birthday;
+
+    //使用Gson可以隐藏一些不像暴露的属性，使用transient关键字就可以在生成JSON的时候忽略掉这个属性
+    private transient String ignore;
+
+    public String getIgnore() {
+        return ignore;
+    }
+
+    public void setIgnore(String ignore) {
+        this.ignore = ignore;
+    }
 
     public String getName() {
         return name;
@@ -88,5 +101,21 @@ public class Diaosi {
 
     public void setBirthday(String birthday) {
         this.birthday = birthday;
+    }
+
+    @Override
+    public String toString() {
+        return "Diaosi{" +
+                "name='" + name + '\'' +
+                ", school='" + school + '\'' +
+                ", has_girlfriend=" + has_girlfriend +
+                ", age=" + age +
+                ", car=" + car +
+                ", house=" + house +
+                ", major=" + Arrays.toString(major) +
+                ", comment='" + comment + '\'' +
+                ", birthday='" + birthday + '\'' +
+                ", ignore='" + ignore + '\'' +
+                '}';
     }
 }
