@@ -6,6 +6,8 @@ package com.wwg.bean;
  */
 public class Diaosi {
 
+    //使用GSON，就可以把这个name属性改变成想要的名字
+    //@SerializedName("NAMEnew")
     private String name;
     private String school;
     private boolean has_girlfriend;
