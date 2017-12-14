@@ -15,8 +15,8 @@ public class JsonObjectSample {
 
     public static void main(String[] args) {
         //jSONObjectSample();
-        //createJsonByMap();
-        createJsonByBean();
+        createJsonByMap();
+        //createJsonByBean();
     }
 
     /**
