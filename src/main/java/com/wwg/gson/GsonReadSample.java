@@ -29,5 +29,9 @@ public class GsonReadSample {
         System.out.println(wangxiaoerWithBirthday);
         //toLocalString方法用于显示当前地区的时间日期格式，不用于计算
         System.out.println(wangxiaoerWithBirthday.getBirthday().toLocaleString());
+
+        //GSON在集合类的解析方面的应用，可以在JSON集合类和目标的List（Set等）当中自动处理转换
+        System.out.println(wangxiaoerWithBirthday.getMajor());
+        System.out.println(wangxiaoerWithBirthday.getMajor().getClass());
     }
 }

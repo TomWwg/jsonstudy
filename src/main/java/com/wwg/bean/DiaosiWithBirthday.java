@@ -1,7 +1,7 @@
 package com.wwg.bean;
 
-import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by wwg on 2017/12/15.
@@ -15,7 +15,7 @@ public class DiaosiWithBirthday {
     private double age;
     private Object car;
     private Object house;
-    private String[] major;
+    private List<String> major;
     private String comment;
     private Date birthday;
 
@@ -67,11 +67,11 @@ public class DiaosiWithBirthday {
         this.house = house;
     }
 
-    public String[] getMajor() {
+    public List<String> getMajor() {
         return major;
     }
 
-    public void setMajor(String[] major) {
+    public void setMajor(List<String> major) {
         this.major = major;
     }
 
@@ -100,7 +100,7 @@ public class DiaosiWithBirthday {
                 ", age=" + age +
                 ", car=" + car +
                 ", house=" + house +
-                ", major=" + Arrays.toString(major) +
+                ", major=" + major +
                 ", comment='" + comment + '\'' +
                 ", birthday=" + birthday +
                 '}';
