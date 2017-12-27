@@ -4,6 +4,10 @@
 .classpath
 .project
 .settings
-*.iml
+
 .idea/*.xml
 target/
+
+*.iml
+.idea/workspace.xml
+jsonstudy.iml
